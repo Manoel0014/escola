@@ -42,15 +42,6 @@ JWT_SECRET=sua_chave_secreta
 
 ---
 
-# Arquivo .env
-
-Crie um arquivo chamado `.env`:
-
-```env
-DATABASE_URL="postgresql://usuario:senha@localhost:5432/escola"
-PORT=3000
-JWT_SECRET=example_secret
-```
 
 ---
 Comandos do Prisma
