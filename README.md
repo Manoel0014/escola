@@ -4,7 +4,7 @@
  1. Clonar o repositório
 
 
-git clone (https://github.com/Manoel0014/escola.git)
+ git clone (https://github.com/Manoel0014/escola.git)
 
 
  2. Entrar na pasta do projeto
@@ -42,7 +42,7 @@ JWT_SECRET=sua_chave_secreta
 
 ---
 
-# Arquivo .env.example
+# Arquivo .env
 
 Crie um arquivo chamado `.env`:
 
