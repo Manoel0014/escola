@@ -1,20 +1,25 @@
 
 # Instalação do projeto
 
- 1. Clonar o repositório
+## 1. Clonar o repositório
 
+```bash
+git clone (https://github.com/Manoel0014/escola.git)
+```
 
- git clone (https://github.com/Manoel0014/escola.git)
+## 2. Entrar na pasta do projeto
 
+```bash
+cd escola
+```
 
- 2. Entrar na pasta do projeto
+## 3. Instalar as dependências
 
-
- 3. Instalar as dependências
-
-
+```bash
 npm install
+```
 
+---
 
 # Configuração do PostgreSQL
 
@@ -42,97 +47,183 @@ JWT_SECRET=sua_chave_secreta
 
 ---
 
+---
+
+# Comandos do Prisma
+
+## Gerar o Prisma Client
+
+```bash
+npx prisma generate
+```
+
+## Criar migration
+
+```bash
+npx prisma migrate dev --name init
+```
+
+## Visualizar banco de dados
+
+```bash
+npx prisma studio
+```
 
 ---
-Comandos do Prisma
 
-Gerar o Prisma Client: npx prisma generate
+# Executando o projeto
 
-Criar migration: npx prisma migrate dev --name init
+## Ambiente de desenvolvimento
 
-Visualizar banco de dados: npx prisma studio
-
-
-
-
-Executando o projeto
-
-Ambiente de desenvolvimento
-
+```bash
 npm run dev
+```
+
+## Build do projeto
+
+```bash
+npm run build
+```
+
+## Executar versão compilada
+
+```bash
+npm start
+```
 
 
+# Documentação básica dos endpoints
 
+## Professores
 
-Documentação básica dos endpoints
+### Criar professor
 
-Professores
+```http
+POST /professores
+```
 
-Criar professor: POST /professores
+### Listar professores
 
-Listar professores: GET /professores
+```http
+GET /professores
+```
 
+### Buscar professor por ID
 
-Buscar professor por ID: GET /professores/:id
+```http
+GET /professores/:id
+```
 
-Atualizar professor: PUT /professores/:id
+### Atualizar professor
 
-Deletar professor: DELETE /professores/:id
+```http
+PUT /professores/:id
+```
 
-Alunos
+### Deletar professor
 
-Criar aluno: POST /alunos
+```http
+DELETE /professores/:id
+```
 
-Listar alunos: GET /alunos
+---
 
+## Alunos
 
-Buscar aluno por ID: GET /alunos/:id
+### Criar aluno
 
+```http
+POST /alunos
+```
 
-Atualizar aluno: PUT /alunos/:id
+### Listar alunos
 
+```http
+GET /alunos
+```
 
-Deletar aluno: DELETE /alunos/:id
+### Buscar aluno por ID
 
-Turmas
-Criar turma: POST /turmas
+```http
+GET /alunos/:id
+```
 
+### Atualizar aluno
 
-Listar turmas: GET /turmas
+```http
+PUT /alunos/:id
+```
 
-Buscar turma por ID: GET /turmas/:id
+### Deletar aluno
 
-Atualizar turma:PUT /turmas/:id
+```http
+DELETE /alunos/:id
+```
 
-Deletar turma: DELETE /turmas/:id
+---
 
+## Turmas
 
-Exemplos de requisição
+### Criar turma
 
-Criar professor
+```http
+POST /turmas
+```
 
-json
+### Listar turmas
+
+```http
+GET /turmas
+```
+
+### Buscar turma por ID
+
+```http
+GET /turmas/:id
+```
+
+### Atualizar turma
+
+```http
+PUT /turmas/:id
+```
+
+### Deletar turma
+
+```http
+DELETE /turmas/:id
+```
+
+---
+
+# Exemplos de requisição
+
+## Criar professor
+
+```json
 {
   "nome": "Carlos Silva",
   "email": "carlos@email.com",
   "password": "123456"
 }
+```
 
+## Criar aluno
 
-Criar aluno
-
-json
+```json
 {
   "nome": "João",
   "sobrenome": "Souza"
 }
+```
 
+## Criar turma
 
-Criar turma
-
-json
+```json
 {
   "nomeTurma": "Turma A",
   "professorId": 1
 }
+```
 
+---
